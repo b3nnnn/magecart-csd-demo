@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Payment - Payments-R-US</title>
+    <meta name="description" content="The most secure (now with SSL encryption so your money must be safe!)">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#">Payments-R-US</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page payment-page">
+        <section class="clean-block payment-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Payment</h2>
+                    <p>This is a fake payment form for the purpose of demonstrating the techniques leveraged by magecart style attacks. Please don't submit your actual credit card details</p>
+                </div>
+                <form id="pay" name="pay">
+                    <div class="products">
+                        <h3 class="title">Checkout</h3>
+                        <div class="item"><span class="price">$200</span>
+                            <p class="item-name">BBQ&nbsp;</p>
+                            <p class="item-description">Family-pack BBQ</p>
+                        </div>
+                        <div class="item"><span class="price">$80</span>
+                            <p class="item-name">Volleyball</p>
+                            <p class="item-description">Fun and Games!</p>
+                        </div>
+                        <div class="total"><span>Total</span><span class="price">$280</span></div>
+                    </div>
+                    <div class="card-details">
+                        <h3 class="title">Credit Card Details</h3>
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <div class="mb-3"><label class="form-label" for="card_holder">Card Holder</label><input class="form-control" type="text" id="card_holder" placeholder="Card Holder" name="card_holder"></div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="mb-3"><label class="form-label">Expiration date</label>
+                                    <div class="input-group expiration-date"><input class="form-control" type="text" placeholder="MM" name="expiration_month"><input class="form-control" type="text" placeholder="YY" name="expiration_year"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="mb-3"><label class="form-label" for="card_number">Card Number</label><input class="form-control" type="text" id="card_number" placeholder="Card Number" name="card_number"></div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="mb-3"><label class="form-label" for="cvc">CVC</label><input class="form-control" type="text" id="cvc" placeholder="CVC" name="cvc"></div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="mb-3"><button class="btn btn-primary d-block w-100" name="submit" type="submit">Proceed</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Payments-R-US</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Payments</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2022 Payments-R-US</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    {{javascript | safe}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<TITLE> Javascript Service! </TITLE>
+
+<P>Hello, welcome to the javascript hosting service.</P>
+
+
+<script>
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+
+function showCookie(){
+    document.write(document.cookie);
+}
+</script>
+<button onclick="setCookie('hacked', 'yes', 1)">Set compromized cookie.</button>
+<button onclick="showCookie()">Show cookie.</button>
+<button onclick="showCookie()">Clear cookie.</button>
+
+<P>
+
+<input id="toggle-event" type="checkbox" data-toggle="toggle">
+<div id="console-event"></div>
+<script>
+  $(function() {
+    $('#toggle-event').change(function() {
+      $('#console-event').html('Toggle: ' + $(this).prop('checked'))
+    })
+  })
+</script>
