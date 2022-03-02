@@ -9,16 +9,9 @@ on:
 jobs:
 
   build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the Web Docker image
-      run: docker build ./web --file ./web/Dockerfile --tag web:$(date +%s)
-      
-    - uses: actions/checkout@v2
-    - name: Build the jshost Docker image
-      run: docker build ./jshost --file ./jshost/Dockerfile --tag web:$(date +%s)
-
-
+   - name: Publish Image
+     uses: matootie/github-docker@v3.0.0
+     with:
+        accessToken: ${{ github.token }}
+        context: web/
+        
