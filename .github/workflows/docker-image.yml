@@ -11,7 +11,9 @@ jobs:
       runs-on: ubuntu-latest
       steps:
          - name: Publish Image
-           uses: matootie/github-docker@v3.0.0
+           uses: matootie/github-docker@v3.1.0
            with:
               accessToken: ${{ github.token }}
-              context: web/
+              context: web
+              contextName: web/Dockerfile
+              containerRegistry: true
