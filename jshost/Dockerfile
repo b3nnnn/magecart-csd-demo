@@ -1,5 +1,6 @@
 FROM python:3.8-slim-buster
 
+LABEL org.opencontainers.image.source = "https://github.com/b3nnnn/magecart-csd-demo"
 WORKDIR /app
 
 COPY requirements.txt requirements.txt

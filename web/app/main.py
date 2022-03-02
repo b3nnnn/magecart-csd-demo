@@ -1,7 +1,8 @@
 from flask import Flask, render_template, send_from_directory
+import os
 app = Flask(__name__)
 
-javascript = '<script src="http://localhost:8080/js/jquery.js"></script>'
+javascript = '<script src="' + os.environ.get('JSURI') + '"></script>'
 
 @app.route('/')
 @app.route('/index')

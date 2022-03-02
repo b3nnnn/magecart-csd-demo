@@ -1,0 +1,62 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: magecart 
+  annotations:
+    ves.io/sites: ves-io-system/sg3-sin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: magecart 
+  template:
+    metadata:
+      labels:
+        app: magecart 
+    spec:
+      containers:
+        - name: web 
+          image: ghcr.io/b3nnnn/magecart-csd-demo:web
+          env:
+          - name: JSHOST
+            value: "https://jshost.gsa.f5demos.com/js/jquery.js"
+          ports:
+            - containerPort: 8000 
+              protocol: TCP
+        - name: jshost
+          image: ghcr.io/b3nnnn/magecart-csd-demo:jshost
+          ports:
+            - containerPort: 5000
+              protocol: TCP
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: magecart
+  labels:
+    app: magecart
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000 
+  selector:
+    app: web
+  type: ClusterIP
+  sessionAffinity: None
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: magecartjs
+  labels:
+    app: magecart
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+  selector:
+    app: jshost
+  type: ClusterIP
+  sessionAffinity: None
