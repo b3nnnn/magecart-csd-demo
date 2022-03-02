@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Web Docker image
+      run: docker build ./web --file ./web/Dockerfile --tag web:$(date +%s)
+      
+    - uses: actions/checkout@v2
+    - name: Build the jshost Docker image
+      run: docker build ./jshost --file ./jshost/Dockerfile --tag web:$(date +%s)
+
+
